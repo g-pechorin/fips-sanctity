@@ -1,3 +1,6 @@
 [submodule "cpp-generators"]
 	path = cpp-generators
 	url = https://github.com/c-smile/cpp-generators.git
+[submodule "utest"]
+	path = utest
+	url = https://github.com/sheredom/utest.h.git

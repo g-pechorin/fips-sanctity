@@ -2,3 +2,4 @@
 exports:
  header-dirs:
   - cpp-generators
+  - utest
