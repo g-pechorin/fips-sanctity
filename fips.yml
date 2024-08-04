@@ -1,5 +1,6 @@
 
 exports:
  header-dirs:
-  - cpp-generators
-  - utest
+  - cpp-generators/
+  - utest/
+  - mini-yaml/yaml/
