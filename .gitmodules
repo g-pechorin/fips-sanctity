@@ -7,3 +7,6 @@
 [submodule "mini-yaml"]
 	path = mini-yaml
 	url = https://github.com/jimmiebergmann/mini-yaml.git
+[submodule "cereal"]
+	path = cereal
+	url = https://github.com/USCiLab/cereal.git

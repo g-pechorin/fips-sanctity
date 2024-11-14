@@ -4,3 +4,4 @@ exports:
   - cpp-generators/
   - utest/
   - mini-yaml/yaml/
+  - cereal/include/cereal/
