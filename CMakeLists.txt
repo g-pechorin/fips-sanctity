@@ -8,20 +8,15 @@ include("${FIPS_ROOT_DIR}/cmake/fips.cmake")
 fips_setup()
 
 	# duktape
-	fips_begin_lib(duktape)
-        fips_dir(duktape/src)
-        fips_files(
-            duk_config.h
-            duktape.h
-            duktape.c
-        )
-	fips_end_lib()
-	target_include_directories(duktape PUBLIC duktape/src)
-
-
-
-
-
+        fips_begin_lib(duktape)
+            fips_dir(duktape/src)
+            fips_files(
+                duk_config.h
+                duktape.h
+                duktape.c
+            )
+        fips_end_lib()
+        target_include_directories(duktape PUBLIC duktape/src)
 
 
 	# the "original?" module approach
@@ -34,18 +29,14 @@ fips_setup()
 			)
 		fips_end_lib()
 		target_include_directories(dukmod_duktape PUBLIC duktape/module-duktape/)
-
-		fips_begin_app(dukmod_duktape_test cmdline)
-			fips_deps(dukmod_duktape)
-			fips_dir(duktape/module-duktape)
-			fips_files(
-				test.c
-			)
-		fips_end_app()
-
-
-
-
+        # teh test
+            fips_begin_app(dukmod_duktape_test cmdline)
+                fips_deps(dukmod_duktape)
+                fips_dir(duktape/module-duktape)
+                fips_files(
+                    test.c
+                )
+            fips_end_app()
 
 
 	# the "more nodejs?" module approach
@@ -58,39 +49,32 @@ fips_setup()
 			)
 		fips_end_lib()
 		target_include_directories(dukmod_nodeish PUBLIC duktape/module-nodeish/)
-
-		fips_begin_app(dukmod_nodeish_test cmdline)
-			fips_deps(dukmod_nodeish)
-			fips_dir(duktape/module-nodeish)
-			fips_files(
-				test.c
-			)
-		fips_end_app()
-
-
-
-
+        # the test
+            fips_begin_app(dukmod_nodeish_test cmdline)
+                fips_deps(dukmod_nodeish)
+                fips_dir(duktape/module-nodeish)
+                fips_files(
+                    test.c
+                )
+            fips_end_app()
 
 
 	# add libs to not-windows
-	IF (WIN32)
-		# ...
-	ELSE()
-		target_link_libraries(dukmod_duktape_test m)
-		target_link_libraries(dukmod_nodeish_test m)
-	ENDIF()
+        IF (WIN32)
+            # ...
+        ELSE()
+            target_link_libraries(dukmod_duktape_test m)
+            target_link_libraries(dukmod_nodeish_test m)
+        ENDIF()
 
-
-
-    
-
-	# dukp
-	fips_begin_lib(dukglue)
-        fips_deps(dukglue)
-        fips_dir(duktape/dukglue-lib)
-        fips_files(
-            dukglue.hpp
-            dukglue.cpp
-        )
-	fips_end_lib()
-	target_include_directories(dukglue PUBLIC duktape/dukglue-lib)
+        
+	# dukglue
+        fips_begin_lib(dukglue)
+            fips_deps(duktape)
+            fips_dir(duktape/dukglue-lib)
+            fips_files(
+                dukglue.hpp
+                dukglue.cpp
+            )
+        fips_end_lib()
+        target_include_directories(dukglue PUBLIC duktape/dukglue-lib)
