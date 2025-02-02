@@ -10,3 +10,6 @@
 [submodule "cereal"]
 	path = cereal
 	url = https://github.com/USCiLab/cereal.git
+[submodule "duktape"]
+	path = duktape
+	url = https://github.com/svaarala/duktape.git
