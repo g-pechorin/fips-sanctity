@@ -36,7 +36,7 @@ fips_setup()
 				test.c
 			)
 		fips_end_app()
-        
+
 	# the "more nodejs?" module approach
 		fips_begin_lib(dukmod_duktape)
 			fips_deps(duktape)
@@ -63,3 +63,15 @@ fips_setup()
 		target_link_libraries(dukmod_duktape_test m)
 		target_link_libraries(dukmod_nodeish_test m)
 	ENDIF()
+
+
+	# dukp
+	fips_begin_lib(dukp)
+        fips_deps(dukp)
+        fips_dir(duktape/dukp)
+        fips_files(
+            dukglue.hpp
+            dukglue.cpp
+        )
+	fips_end_lib()
+	target_include_directories(dukp PUBLIC duktape/dukp)
