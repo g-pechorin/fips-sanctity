@@ -66,12 +66,12 @@ fips_setup()
 
 
 	# dukp
-	fips_begin_lib(dukp)
-        fips_deps(dukp)
-        fips_dir(duktape/dukp)
+	fips_begin_lib(dukglue)
+        fips_deps(dukglue)
+        fips_dir(duktape/dukglue-lib)
         fips_files(
             dukglue.hpp
             dukglue.cpp
         )
 	fips_end_lib()
-	target_include_directories(dukp PUBLIC duktape/dukp)
+	target_include_directories(dukglue PUBLIC duktape/dukglue-lib)
