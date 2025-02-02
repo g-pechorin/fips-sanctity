@@ -18,6 +18,12 @@ fips_setup()
 	fips_end_lib()
 	target_include_directories(duktape PUBLIC duktape/src)
 
+
+
+
+
+
+
 	# the "original?" module approach
 		fips_begin_lib(dukmod_duktape)
 			fips_deps(duktape)
@@ -36,6 +42,11 @@ fips_setup()
 				test.c
 			)
 		fips_end_app()
+
+
+
+
+
 
 	# the "more nodejs?" module approach
 		fips_begin_lib(dukmod_nodeish)
@@ -56,6 +67,11 @@ fips_setup()
 			)
 		fips_end_app()
 
+
+
+
+
+
 	# add libs to not-windows
 	IF (WIN32)
 		# ...
@@ -64,6 +80,9 @@ fips_setup()
 		target_link_libraries(dukmod_nodeish_test m)
 	ENDIF()
 
+
+
+    
 
 	# dukp
 	fips_begin_lib(dukglue)
