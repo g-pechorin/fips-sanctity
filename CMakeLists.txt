@@ -38,7 +38,7 @@ fips_setup()
 		fips_end_app()
 
 	# the "more nodejs?" module approach
-		fips_begin_lib(dukmod_duktape)
+		fips_begin_lib(dukmod_nodeish)
 			fips_deps(duktape)
 			fips_dir(duktape/module-nodeish)
 			fips_files(
@@ -46,10 +46,10 @@ fips_setup()
 				duk_module_node.h
 			)
 		fips_end_lib()
-		target_include_directories(dukmod_duktape PUBLIC duktape/module-nodeish/)
+		target_include_directories(dukmod_nodeish PUBLIC duktape/module-nodeish/)
 
-		fips_begin_app(dukmod_duktape_test cmdline)
-			fips_deps(dukmod_duktape)
+		fips_begin_app(dukmod_nodeish_test cmdline)
+			fips_deps(dukmod_nodeish)
 			fips_dir(duktape/module-nodeish)
 			fips_files(
 				test.c
