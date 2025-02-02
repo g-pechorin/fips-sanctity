@@ -1,7 +1,8 @@
 
 exports:
  header-dirs:
-  - cpp-generators/
-  - utest/
-  - mini-yaml/yaml/
   - cereal/include/
+  - cpp-generators/
+  - inc/
+  - mini-yaml/yaml/
+  - utest/
