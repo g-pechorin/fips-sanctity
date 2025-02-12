@@ -1,15 +1,6 @@
 [submodule "cpp-generators"]
 	path = cpp-generators
 	url = https://github.com/c-smile/cpp-generators.git
-[submodule "utest"]
-	path = utest
-	url = https://github.com/sheredom/utest.h.git
-[submodule "mini-yaml"]
-	path = mini-yaml
-	url = https://github.com/jimmiebergmann/mini-yaml.git
-[submodule "cereal"]
-	path = cereal
-	url = https://github.com/USCiLab/cereal.git
 [submodule "duktape/dukglue"]
 	path = duktape/dukglue
 	url = https://github.com/Aloshi/dukglue.git
