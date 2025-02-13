@@ -6,9 +6,6 @@ exports:
   dukmod_nodeish: .
   dukglue: .
  header-dirs:
-  - cereal/include/
   - cpp-generators/
   - fkYAML/single_include/
   - inc/
-  - mini-yaml/yaml/
-  - utest/
