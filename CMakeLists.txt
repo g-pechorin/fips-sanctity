@@ -17,6 +17,11 @@ fips_setup()
             )
         fips_end_lib()
         target_include_directories(duktape PUBLIC duktape/src)
+        
+    # try to disable the warnings when docker_throw doesn't return (it uses longjump - yuck)
+        target_compile_options(duktape PRIVATE
+            -Wno-return-type
+        )
 
 
 	# the "original?" module approach
@@ -67,3 +72,5 @@ fips_setup()
             target_link_libraries(dukmod_duktape_test m)
             target_link_libraries(dukmod_nodeish_test m)
         ENDIF()
+
+
