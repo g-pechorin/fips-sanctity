@@ -4,8 +4,6 @@ exports:
   duktape: .
   dukmod_duktape: .
   dukmod_nodeish: .
-  dukglue: .
  header-dirs:
   - cpp-generators/
-  - fkYAML/single_include/
   - inc/
