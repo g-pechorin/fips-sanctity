@@ -1,9 +1,6 @@
 [submodule "cpp-generators"]
 	path = cpp-generators
 	url = https://github.com/c-smile/cpp-generators.git
-[submodule "duktape/dukglue"]
-	path = duktape/dukglue
-	url = https://github.com/Aloshi/dukglue.git
 [submodule "fkYAML"]
 	path = fkYAML
 	url = https://github.com/fktn-k/fkYAML.git

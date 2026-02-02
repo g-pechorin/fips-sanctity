@@ -60,21 +60,10 @@ fips_setup()
 
 
 	# add libs to not-windows
-        IF (WIN32)
+        IF (MSVC)
             # ...
         ELSE()
+            target_link_libraries(duktape m)
             target_link_libraries(dukmod_duktape_test m)
             target_link_libraries(dukmod_nodeish_test m)
         ENDIF()
-
-        
-	# dukglue
-        fips_begin_lib(dukglue)
-            fips_deps(duktape)
-            fips_dir(duktape/dukglue-lib)
-            fips_files(
-                dukglue.hpp
-                dukglue.cpp
-            )
-        fips_end_lib()
-        target_include_directories(dukglue PUBLIC duktape/dukglue-lib)
