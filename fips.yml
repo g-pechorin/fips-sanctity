@@ -6,4 +6,3 @@ exports:
   dukmod_nodeish: .
  header-dirs:
   - cpp-generators/
-  - inc/
