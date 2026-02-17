@@ -71,6 +71,9 @@
 #if !defined(DUK_CONFIG_H_INCLUDED)
 #define DUK_CONFIG_H_INCLUDED
 
+/* Added by user request to fix build */
+#define DUK_COMPILING_DUKTAPE
+
 /*
  *  Intermediate helper defines
  */
