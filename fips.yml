@@ -7,3 +7,4 @@ exports:
  header-dirs:
   - cpp-generators/
   - duktape/src/
+  - duktape/module-nodeish/
