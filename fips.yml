@@ -6,3 +6,4 @@ exports:
   dukmod_nodeish: .
  header-dirs:
   - cpp-generators/
+  - duktape/src/
