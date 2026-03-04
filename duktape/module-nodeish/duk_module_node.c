@@ -4,7 +4,7 @@
  *  https://nodejs.org/api/modules.html
  */
 
-#include "duktape.h"
+#include "../src/duktape.h"
 #include "duk_module_node.h"
 
 #if DUK_VERSION >= 19999
